@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Poppins:wght@600&family=Roboto&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+$dark_blue:#020617;
+$light_green:#effffa;
+$dark_green:#14da8f;
+$black:#000000;
+$white:#fff;
+$red:#ad0a1b;
+.dflex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+body{
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  // background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+video{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+}
+
+header{
+  @extend .dflex;
+  justify-content: space-between;
+  padding: 0 13%;
+  height: 120px;
+  position: relative;
+  .logo-wrapper{
+    font-size: 32px;
+    font-weight: 600;
+    span{
+      color: $white;
+    }
+  }
+  .menu-container{
+    @extend .dflex;
+    justify-content: flex-end;
+    width: 600px;
+    height: 56px;
+    span{
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+      height: 100%;
+      color: $white;
+      +span{
+        &:before{
+          content: "";
+          position: absolute;
+          width: 2px;
+          height: 50%;
+          background-color: $white;
+          left: -36px;
+          top:50%;
+          transform: translateY(-50%);
+        }
+      }
+      .icon{
+        display: inline-flex;
+        margin-right: 20px;
+        &:hover{
+          cursor: pointer;
+        }
+        +.icon{
+          margin-left: 20px;
+        }
+      }
+      &:nth-child(1){
+        width: 22%;
+      }
+      &:nth-child(2){
+        width: 42%;
+        .icon{
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+
+.content-wrapper{
+  width: 80%;
+  margin: 0 auto;
+  @extend .dflex;
+  justify-content: space-between;
+  align-items: center;
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  border-radius: 16px;
+  padding: 3%;
+  position: relative;
+  .left-content-wrapper{
+    width: 48%;
+    h2{
+      font-size: 3.3vw;
+      font-weight: 600;
+      line-height: 1.3;
+      overflow: hidden;
+      span{
+        display: inline-block;
+        span.second{
+          margin-left: 0;
+        }
+      }
+    }
+    p{
+      font-size: 1.02vw;
+      color: #333;
+      margin: 20px 0 30px 0;
+    }
+    .btn-group{
+      @extend .dflex;
+      width: 70%;
+      justify-content: space-between;
+      .btn{
+        @extend .dflex;
+        width: 48%;
+        height: 56px;
+        font-size: 20px;
+        border-radius: 10px;
+        font-weight: 600;
+        &.btn-primary{
+          background-color: $black;
+          color: $white;
+          &:hover{
+            background-color: $white;
+            cursor: pointer;
+            color: $black;
+            transition: 0.5s;
+            border: 1px solid $black;
+          }
+        }
+        &.btn-secondary{
+          background-color: $white;
+          color: $black;
+          border: 1px solid $black;
+          &:hover{
+            background-color: $black;
+            cursor: pointer;
+            color: $white;
+            transition: 0.5s;
+            // border: 1px solid $white;
+          }
+        }
+      }
+    }
+  }
+  .right-content-wrapper{
+    width: 48%;
+    @extend .dflex;
+    justify-content: flex-end;
+    img{
+      display: block;
+      width: 100%;
+
+    }
+  }
+}
+
+.contact-container{
+  @extend .dflex;
+  padding: 4px;
+  min-height: 100vh;
+  position: relative;
+  margin-top: 40vh;
+  .contact-form{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 100%;
+    .contact-heading-container{
+      padding-bottom: 1rem;
+      .contact-title{
+        font-size: 32px;
+        font-weight: 600;
+        display: inline;
+        border-bottom: 4px solid $dark_blue;
+      }
+      .subtitle{
+        padding-top: 1rem;
+      }
+    }
+    .name-input{
+      padding: 2px;
+    }
+    .email-input{
+      margin: 4px 0;
+      padding: 2px;
+    }
+    .message-input{
+      padding: 2px;
+    }
+    .send-button{
+      color: $white;
+      border-width: 2px;
+      background-color: $dark_blue;
+      padding: 4px;
+      margin-top: 4px;
+      &:hover{
+        background-color:rgba(252,70,107,1);
+        cursor: pointer;
+      }
+    }
+  }
+}
