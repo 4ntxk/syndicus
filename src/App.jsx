@@ -8,6 +8,8 @@ import { Link } from "react-scroll";
 import bgVideo from "./assets/sal-bg-sample.mp4";
 import ReactPlayer from "react-player";
 
+//to be refactored
+
 let easeing = [0.6, -0.05, 0.01, 0.99];
 
 const stagger = {
