@@ -98,6 +98,7 @@ header{
 .content-wrapper{
   width: 80%;
   margin: 0 auto;
+  margin-top: 10vh;
   @extend .dflex;
   justify-content: space-between;
   align-items: center;
@@ -106,7 +107,7 @@ header{
   padding: 3%;
   position: relative;
   .left-content-wrapper{
-    width: 48%;
+    width: 50%;
     h2{
       font-size: 3.3vw;
       font-weight: 600;
@@ -162,12 +163,12 @@ header{
     }
   }
   .right-content-wrapper{
-    width: 48%;
+    width: 50%;
     @extend .dflex;
-    justify-content: flex-end;
+    justify-content: center;
     img{
       display: block;
-      width: 100%;
+      width: 200%;
 
     }
   }
@@ -175,8 +176,8 @@ header{
 
 .contact-container{
   @extend .dflex;
-  padding: 4px;
-  min-height: 100vh;
+  padding-bottom: 10vh;
+  min-height: 90vh;
   position: relative;
   margin-top: 40vh;
   .contact-form{
@@ -205,13 +206,31 @@ header{
     }
     .message-input{
       padding: 2px;
+      resize: none;
     }
     .send-button{
-      color: $white;
-      border-width: 2px;
       background-color: $dark_blue;
-      padding: 4px;
-      margin-top: 4px;
+      border: 1px solid #FF4742;
+      border-radius: 6px;
+      box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+      box-sizing: border-box;
+      color: $white;
+      cursor: pointer;
+      display: inline-block;
+      font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 16px;
+      min-height: 40px;
+      outline: 0;
+      padding: 12px 14px;
+      text-align: center;
+      text-rendering: geometricprecision;
+      text-transform: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      vertical-align: middle;
       &:hover{
         background-color:rgba(252,70,107,1);
         cursor: pointer;

@@ -5,9 +5,8 @@ import { motion } from "framer-motion";
 import { AiFillFacebook, AiFillTwitterCircle } from "react-icons/ai";
 import Contact from "./comps/Contact";
 import { Link } from "react-scroll";
-import bgVideo from "./assets/sal-bg-sample.mp4";
-import ReactPlayer from "react-player";
-
+import bgVideo from "./assets/fifa-bg.mp4";
+import logoImage from "./assets/sal-logo1-transbg.png";
 //to be refactored
 
 let easeing = [0.6, -0.05, 0.01, 0.99];
@@ -204,37 +203,36 @@ const App = () => {
             </motion.span>
           </motion.h2>
           <motion.p variants={fadeInUp}>
-            SAL is amateur-friendly esports community. <br /> Compete in weekly
-            one-day tournaments or prove yourself in regular long-term league.{" "}
-            <br />
-            Show your skill, compete with others, rise to the top.
+            Głodny esportowych wrażeń?
+            <br /> Rywalizuj w jednodniowych turniejach lub sprawdź swoje
+            umiejętności w lidze sezonowej. <br />
+            Pokaż na co cię stać i wejdź na szczyt!
           </motion.p>
           <motion.div className="btn-group" variants={stagger}>
             <motion.a
               className="btn btn-primary"
               variants={btnGroup}
-              href="https://www.google.pl/intl/pl/forms/about/"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSefJ9b7aVDu5RJRvWIFnCQ9oe-uRZwIjgUCg9F7H8SXnIsVvw/viewform?usp=sf_link"
             >
-              <motion.div>Register</motion.div>
+              <motion.div>Zarejestruj</motion.div>
             </motion.a>
-            <motion.a className="btn btn-secondary" variants={btnGroup}>
-              <Link to="contact" smooth={true} duration={500}>
-                <motion.div>Contact</motion.div>
-              </Link>
-            </motion.a>
+            <Link
+              className="btn btn-secondary"
+              variants={btnGroup}
+              to="contact"
+              smooth={true}
+              duration={500}
+            >
+              <motion.a>
+                <motion.div>Kontakt</motion.div>
+              </motion.a>
+            </Link>
           </motion.div>
         </div>
 
-        <motion.div className="right-content-wrapper">
-          {/* <motion.img
-            src="./placeholder.jpg"
-            alt="bg"
-            initial={{ x: 200, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
-          /> */}{" "}
-          <motion.div>
-            {/* <ReactPlayer url="https://www.youtube.com/watch?v=2P4Oey2sdZs" /> */}
+        <motion.div className="right-content-wrapper" variants={stagger}>
+          <motion.div variants={fadeInUp}>
+            <motion.img src={logoImage} alt="" />
           </motion.div>
         </motion.div>
       </motion.div>
