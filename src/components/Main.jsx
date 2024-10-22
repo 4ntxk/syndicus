@@ -25,15 +25,21 @@ const Main = () => {
 
           <br />
           {/* <img src="/logoasp.png" alt="logo" className="mx-auto w-1/4 h-1/4" /> */}
-          <p className="font-black text-white lg:text-[60px] sm:text-[30px] xs:text-[30px] text-[20px] lg:leading-[98px] mt-2 mb-10 text-center">
+          <p className="font-black text-white lg:text-[40px] sm:text-[30px] xs:text-[30px] text-[20px] lg:leading-[98px] mt-2 mb-10 text-center">
             Widzimy się w{" "}
-            <span className="mr-1">Zielonej Górze (16.11.2024)</span> za:
+            <span className="text-red-400"> Zielonej Górze - 16.11.2024 </span>
+            <br /> (Ekologiczna Szkola Podstawowa nr 22, Słowacka 4) za:
           </p>
           <div className="text-7xl flex justify-center">
             <Timer4 targetDate={"2024-11-16"} />
           </div>
-          <p className="font-black text-white lg:text-[60px] sm:text-[30px] xs:text-[30px] text-[20px] lg:leading-[98px] mt-2 mb-10 text-center">
-            Dzień później w Gorzowie Wielkopolskim (17.11.2024) za dokładnie:
+          <p className="font-black text-white lg:text-[40px] sm:text-[30px] xs:text-[30px] text-[20px] lg:leading-[98px] mt-2 mb-10 text-center">
+            Dzień później w{" "}
+            <span className="text-red-400">
+              Gorzowie Wielkopolskim - 17.11.2024
+            </span>
+            <br />
+            (Miejskie Centrum Kultury w Gorzowie, ul. Drzymały 26) za:
           </p>
           <div className="text-7xl flex justify-center">
             <Timer4 targetDate={"2024-11-17"} />

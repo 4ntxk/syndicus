@@ -1,5 +1,6 @@
 import { SectionWrapper } from "../hoc";
 import { AiFillFacebook, AiFillInstagram } from "react-icons/ai";
+import { RiTiktokFill } from "react-icons/ri";
 import { styles } from "../styles";
 
 const Footer = () => {
@@ -29,12 +30,17 @@ const Footer = () => {
       <div className="flex justify-center space-x-8 xs:space-y-4 items-center xs:flex-col md:flex-row pt-8">
         <div className="flex md:space-x-4 xs:flex-col md:flex-row">
           <div className="w-[300px] h-[150px] mx-auto mt-4">
-            <img src="/lubuszankakolor.JPG" alt="bg" />
+            <img src="/lubuszankakolor.JPG" alt="bg" className="h-1/2 w-full" />
           </div>
         </div>
         <div className="flex">
           <div className="w-[300px] h-[150px] mx-auto">
-            <img src="/lubuszanka2.png" alt="bg" />
+            <img src="/lubuszanka2.png" alt="bg" className="h-full w-full" />
+          </div>
+        </div>
+        <div className="flex">
+          <div className="w-[300px] h-[150px] mx-auto">
+            <img src="/mckgorzow.jpg" alt="bg" className="h-full w-full" />
           </div>
         </div>
       </div>
@@ -49,15 +55,28 @@ const Footer = () => {
           <AiFillFacebook />
           <p className="">@syndicusgg</p>
         </a>
-        {/* <a
-          href="https://www.facebook.com/profile.php?id=61556006848080"
+      </div>
+      <div className="hover:text-bgblue text-3xl flex items-center justify-center">
+        <a
+          href="https://www.instagram.com/syndicusamateur"
           target="_blank"
           className="flex items-center"
           rel="noreferrer"
         >
           <AiFillInstagram />
-          <p className="ml-2">@salgg</p>
-        </a> */}
+          <p className="">@syndicusamateur</p>
+        </a>
+      </div>
+      <div className="hover:text-bgblue text-3xl flex items-center justify-center">
+        <a
+          href="https://www.tiktok.com/@syndicus.amateur"
+          target="_blank"
+          className="flex items-center"
+          rel="noreferrer"
+        >
+          <RiTiktokFill />
+          <p className="">@syndicus.amateur</p>
+        </a>
       </div>
       <div className="mx-auto inset-x-0 bottom-0 pt-10">
         <p className="text-center text-xs text-white">
